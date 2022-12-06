@@ -29,7 +29,8 @@ ________________________________________________________________________________
 
 python main.py
 
+or 
 
-# Testing
+Pycharm -> Run -> Run "main"
 
-Testing was done by using pytest
+

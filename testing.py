@@ -2,13 +2,16 @@
 # 1. returning all habits
 # 2. definition of new habits by the user
 # 3. analysis: returning longest streak of habits
-# 4. checking off a habit as done
 
 import pytest
 import time
 import datetime
 from datetime import timedelta
 import sqlite3
+
+import analyze
+import habits
+import predefined
 
 # connecting to the database
 sqliteConnection = sqlite3.connect('habit_db.sqlite3')

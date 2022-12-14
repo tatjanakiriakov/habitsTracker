@@ -1,5 +1,9 @@
 #return all habits (predefined and defined by the user)
 def ReturnAllHabits():
+    """
+    printing out all the habits (no matter if predefined or self-defined)
+    :return: rows with habits and its characteristics
+    """
     try:
         import sqlite3
         import datetime
@@ -29,6 +33,10 @@ def ReturnAllHabits():
 
 # return list of habits with the same periodicricity which is weekly
 def ReturnWeeklyHabits():
+    """
+    printing out weekly habits
+    :return: rows of habits with Period = Weekly
+    """
     try:
         import sqlite3
         import datetime
@@ -59,6 +67,10 @@ def ReturnWeeklyHabits():
 
 # return list of habits with the same periodicricity which is daily
 def ReturnDailyHabits():
+    """
+    printing out weekly habits
+    :return: rows of habits with Period = Daily
+    """
     try:
         import sqlite3
         import datetime
@@ -89,6 +101,10 @@ def ReturnDailyHabits():
 
 # return the longest streak of all defined habits
 def LongStreakHabits():
+    """
+    printing out habits with the maximum streak
+    :return: rows of titles of habits where the Max_Streak is the highest
+    """
     try:
         import sqlite3
         import datetime
@@ -116,6 +132,10 @@ def LongStreakHabits():
 
 # return the longest streak of all given habits
 def LongStreakGiven():
+    """
+    printing out a given habit with the maximum streak
+    :return: rows of titles of habits with IDs that the user chooses and where the streak is maximum
+    """
     try:
         import sqlite3
         import datetime

@@ -8,8 +8,8 @@ def main_page():
     myHabits = Habits()
 
     # creating an empty table
-    import Predefined
-    Predefined.TableCreate()
+    import predefined
+    predefined.TableCreate()
 
 
     # 1. Option: start with 5 predefined habits in the list or with an empty list
@@ -18,8 +18,8 @@ def main_page():
         predefHabits = input("\nDo you want to use predefined habits? Yes/No :  ")
         #creating 5 predefined habits
         if predefHabits == 'Yes':
-            import Predefined
-            Predefined.predefinedhabits()
+            import predefined
+            predefined.predefinedhabits()
             print("Now 5 different predefined habits are part of your tasks that you need to check off regularly. Go to Analyze habits to have a look at them!")
             NewOrPredef = False
         #start without predefined habits in the list
@@ -50,23 +50,23 @@ def main_page():
         choice = input("\nChoose a number to proceed:  ")
 
         # reset if the user fails to check off his habit
-        import Overdue
-        Overdue.Overdue()
+        import overdue
+        overdue.Overdue()
 
 
         # first Option: creating new habits
         if choice == "1":
-            import newHabits
-            newHabits.newHabits()
+            import habits
+            habits.newHabits()
 
 
         # second Option: check off a habit
         elif choice == "2":
-            import Analyze
-            Analyze.ReturnAllHabits() # returning all habits for user to choose which one to check
+            import analyze
+            analyze.ReturnAllHabits() # returning all habits for user to choose which one to check
             # checking off task by user
-            import CheckOff
-            CheckOff.checkOffHabit()
+            import checkoff
+            checkoff.checkOffHabit()
             print("Your chosen habit has been marked as done")
 
 
@@ -76,10 +76,10 @@ def main_page():
             while deleteOrExit != "exit":
                 deleteOrExit = input("\nPlease, type in 1 to delete a habit or [exit] to go back to the main menu: ")
                 if deleteOrExit == "1":
-                    import Analyze
-                    Analyze.ReturnAllHabits() # all the habits are displayed
-                    import Delete
-                    Delete.deletehabits() # user can choose a habit and delete it
+                    import analyze
+                    analyze.ReturnAllHabits() # all the habits are displayed
+                    import delete
+                    delete.deletehabits() # user can choose a habit and delete it
 
 
         # forth Option: analyzing habits
@@ -104,28 +104,28 @@ def main_page():
 
                 # first analyze option: returning all habits
                 if AnalyzeMenu == "1":
-                    import Analyze
-                    Analyze.ReturnAllHabits()
+                    import analyze
+                    analyze.ReturnAllHabits()
 
                 # second analyze option: returning all daily habits
                 elif AnalyzeMenu == "2":
-                    import Analyze
-                    Analyze.ReturnDailyHabits()
+                    import analyze
+                    analyze.ReturnDailyHabits()
 
                 # third analyze option: returning all weekly habits
                 elif AnalyzeMenu == "3":
-                    import Analyze
-                    Analyze.ReturnWeeklyHabits()
+                    import analyze
+                    analyze.ReturnWeeklyHabits()
 
                 # forth analyze option: returning longest run streak of all habits
                 elif AnalyzeMenu == "4":
-                    import Analyze
-                    Analyze.LongStreakHabits()
+                    import analyze
+                    analyze.LongStreakHabits()
 
                 # fifth analyze option: returning longest run streak for a given habit
                 elif AnalyzeMenu == "5":
-                    import Analyze
-                    Analyze.LongStreakGiven()
+                    import analyze
+                    analyze.LongStreakGiven()
 
                 # sixth option: go to the main menu
                 elif AnalyzeMenu == "exit":
